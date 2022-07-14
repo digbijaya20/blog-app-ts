@@ -27,5 +27,5 @@ import './config/database';
 //Server Listenning 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => { 
-    console.log('Server is running on PORTo', 5000);
+    console.log('Server is running on PORT', 5000);
 })
