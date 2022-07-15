@@ -5,7 +5,7 @@ import express from 'express';
 import cros from "cors";
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
-
+import routes from './routes/index';
 
 //Middleware
 
@@ -20,6 +20,12 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
     res.json({msg: 'Hello bro chill now'});
 })
+
+app.use('/api', routes.authRouter
+// (req, res) => {
+//     res.json({msg: 'Hello bro chill now'});
+// }
+)
 
 //Database
 import './config/database';
