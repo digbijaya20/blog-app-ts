@@ -15,9 +15,11 @@ export const validRegister = async (req: Request, res: Response, next: NextFunct
         return res.status(400).json({msg:"Email or phone number format invalid!"});
     }
 
-    if(password.length <6 ){
+    if(password.length < 6 ){
         return res.status(400).json({msg: 'Pssword length must be at least 6 chars!'});
     }
+
+    next();
 }
 
 function validPhone(phone: string){
